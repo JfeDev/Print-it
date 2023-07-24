@@ -1,0 +1,442 @@
+/* variables declaration */
+:root {
+	--primary-color: #3396C0;
+	--secondary-color: #CD006B;
+	--third-color: #EEE325;
+}
+
+/* Reset CSS */
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, .carousel-section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body {
+
+}
+.carousel-section {
+	margin-block: 6em;
+}
+h2 {
+	font-family: 'Roboto Slab', sans-serif;
+	font-size: 40px;
+	font-weight: 900;
+	margin-block: 1em;
+}
+h3{
+	font-family: 'Roboto Slab', sans-serif;
+	font-size: 22px;
+	font-weight: 900;
+	margin-block: 1em;
+}
+
+p, li {
+	font-family: Roboto, sans-serif;
+	font-size: 16px;
+	line-height: 26px;
+}
+.container {
+	max-width: 1440px;
+	margin-inline:auto;
+	padding-inline: 5%;
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.logo{
+	width: 260px;
+	margin-block: 10px;
+}
+
+.btn {
+	background-color: var(--primary-color) ;
+	padding: 16px 32px;
+	margin-inline:5px;
+	border-radius: 5px;
+	color: white;
+	text-decoration: none;
+}
+.devis {
+	background-color: var(--secondary-color);
+}
+
+#banner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 470px;
+	position: relative;
+}
+.banner-img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	object-fit: cover;
+	object-position: center;
+}
+/* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
+/* Gestion des fleches du carrousel */
+#banner .arrow {
+}
+#banner .arrow_left {
+	left: 10px;
+}
+#banner .arrow_right {
+	right: 10px;
+}
+/* Gestion des points du carrousel */
+.dots {
+	bottom: 40px;
+	display: flex;
+}
+.dot {
+	margin-inline: 5px;
+	width: 13px;
+	height: 13px;
+	background-color: #ffffff00;
+	border: 3px solid #fff;
+	border-radius: 100%;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+	z-index: 999;
+}
+.dot.active {
+	background-color: white !important;
+}
+/* Fin du code CSS pour le carousel */
+#banner p {
+	font-family: 'Roboto Slab', sans-serif;
+	font-weight: 900;
+	font-size: 50px;
+	line-height: 66px;
+	color: white;
+	text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+	text-align: center;
+}
+#banner span {
+	display: block;
+	font-weight: 400;
+	font-size: 30px;
+}
+#about-us {
+	display: flex;
+}
+#about-us article, #about-us aside {
+	flex:1;
+}
+#about-us li {
+	background: url("./images/tricolor-icon.png") no-repeat left top;
+	font-size: 16px;
+	line-height: 26px;
+	padding-left:2em;
+	width: 65%;
+	margin-bottom: 1em;
+
+}
+
+#products {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: row-reverse;
+}
+#products div, #products aside {
+	flex:1;
+}
+#products div {
+	padding: 0 6em;
+}
+#products h2 {
+	margin-top: 0;
+}
+.bg-yellow {
+	background-color: var(--third-color);
+}
+#question {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-block: 3em;
+}
+#question h2 {
+	margin-bottom: 10px;
+}
+#question p {
+	margin-bottom: 20px;
+}
+
+#why-us {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+#why-us > div{
+	display: flex;
+	justify-content: space-evenly;
+}
+#why-us article {
+	max-width: 320px;
+	display: flex;
+	flex-direction: column;
+}
+#why-us img {
+	width: 33%;
+	height: 150px;
+	text-align: center;
+	margin-inline: auto;
+	margin-block: 0;
+	object-fit: contain;
+}
+
+.bg-lightblue{
+	background-color: #E6F4FB;
+}
+#contact {
+	margin-bottom: 0;
+}
+#contact article, #contact div {
+	flex:1;
+}
+
+
+#contact .container {
+	flex-direction: row;
+	display: flex;
+	padding: 6em ;
+}
+
+#contact .container > div > div {
+	display: flex;
+	padding-bottom: 20px;
+}
+
+#contact h3 {
+	margin-top: 0;
+	background: url("./images/tricolor-icon.png") no-repeat left top;
+	padding-left:1.5em;
+	width: 200px;
+}
+.inline-icon {
+	vertical-align: middle;
+}
+footer {
+	background-color: #28363D;
+	color: white;
+	display: flex;
+	padding-block: 3em;
+	justify-content: space-evenly;
+	font-size: 12px;
+	align-items: center;
+}
+footer div {
+
+	position: relative;
+}
+.footer-logo {
+	background-color: white;
+	max-width: 308px;
+	padding: 10px;
+}
+.footer-contact {
+	margin-bottom: 1em;
+	font-weight: 700;
+	font-size: 16px;
+
+}
+
+@media all and (max-width: 1250px) {
+	#contact > article {
+		flex: 2;
+	}
+}
+
+
+.carousel-list {
+	list-style-type: disc;
+	/* Specify the bullet point style */
+	position: absolute;
+	width: 100%;
+}
+
+.carousel-list li {
+	margin-bottom: 10px;
+	/* Adjust the spacing between each item */
+}
+
+
+ .carousel-section {
+	width: 100%;
+	min-height: 100vh;
+}
+
+ .carousel-section .carousel-container {
+	width: 100%;
+	height: 40rem;
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+	border-radius: 0.375rem;
+	justify-content: center;
+	display: flex;
+}
+
+ .carousel-section .carousel-container .item {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	display: none;
+	animation: fade 0.3s ease-in-out;
+}
+ .carousel-section .carousel-container .item .numbertext {
+	padding: 0.5rem 0.75rem;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	border-radius: 0.9375rem;
+	font-size: 0.875rem;
+	color: #f2f2f2;
+	background-color: rgba(0, 0, 0, 0.9);
+}
+
+ .carousel-section .carousel-container .item .image {
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
+ .carousel-section .carousel-container .item .image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+ .carousel-section .carousel-container .item .text {
+	width: 100%;
+	padding: 0.625rem 0.9375rem;
+	position: absolute;
+	bottom: 0;
+	font-size: 0.9rem;
+	color: #f2f2f2;
+	background-color: rgba(0, 0, 0, 0.9);
+}
+
+ .carousel-section .carousel-container .item .text .title {
+	margin: 0.5rem 0 0 0;
+	font-size: 1.2rem;
+	font-weight: normal;
+}
+
+ .carousel-section .carousel-container .prev,
+ .carousel-section .carousel-container .next {
+	height: auto;
+	padding: 0.3125rem;
+	top: calc(50% - 1rem);
+	user-select: none;
+	font-size: 1rem;
+	color: #f2f2f2;
+	border-radius: 50%;
+	transition: 0.6s ease;
+	cursor: pointer;
+}
+
+
+ .carousel-section .carousel-container .prev {
+	left: 0.8rem;
+}
+
+ .carousel-section .carousel-container .next {
+	right: 0.8rem;
+}
+
+ .carousel-section .carousel-container .dots {
+	padding: 0.9375rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+}
+
+ .carousel-section .carousel-container .dots .dot {
+	width: 1em;
+	height:1rem;
+	margin: 0 0.325rem;
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 50%;
+	background-color: #bbb;
+	transition: background-color 0.6s ease;
+}
+
+ .carousel-section .carousel-container .dots .dot:focus,
+ .carousel-section .carousel-container .dots .dot:hover {
+	background-color: #717171;
+}
+
+@keyframes fade {
+	from {
+		opacity: 0.8;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+
+.arrow-container{
+	display: flex;
+	justify-content: space-between;
+	width: 100vw;
+	height: 100%;
+	padding: 40px;
+	align-items: center;
+	position: absolute;
+	z-index: 999;
+
+}
